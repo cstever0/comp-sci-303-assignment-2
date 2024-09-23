@@ -183,3 +183,21 @@ bool Singly_Linked_List<Item_Type>::remove(size_t index) {
         return true;
     }
 }
+
+// function for finding a value in the list and returning that items index or size of the list if not present
+template<typename Item_Type>
+size_t Singly_Linked_List<Item_Type>::find(const Item_Type& item) {
+    Node* curr = head;
+    size_t idx = 0;
+
+    while (curr != nullptr) {
+        if (curr->data == item) {
+            return idx;
+        }
+
+        curr = curr->next;
+        ++idx;
+    }
+
+    return num_items;
+}
