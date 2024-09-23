@@ -1,5 +1,5 @@
-#ifndef KIRI_SINGLE_LINK
-#define KIRI_SINGLE_LINK
+#ifndef KIRI_SINGLE_LINK_H
+#define KIRI_SINGLE_LINK_H
 #include <iostream>
 
 using namespace std;
@@ -14,7 +14,7 @@ private:
         Item_Type data;
         Node* next;
 
-        Node(const Item_Type& item_data, Node* next_node = nullptr) : data(item_data), next(next_node) {}
+        Node(const Item_Type& item_data, Node* next_node = nullptr);
     };
 
     Node* head;
