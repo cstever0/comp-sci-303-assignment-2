@@ -1,4 +1,4 @@
-# Comp-Sci 303 - Assignment 1
+# Comp-Sci 303 - Assignment 2
 
 There are two programs included in this assignment. The first creates a singly linked list that mimics the functionality of the standard template library linked list. The second uses a vector to create and demonstrate the functionality of a stack.
 
