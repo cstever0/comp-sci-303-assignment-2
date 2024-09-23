@@ -9,7 +9,7 @@ Singly_Linked_List<Item_Type>::Node::Node(const Item_Type& item_data, Node* next
 
 // this is my class constructor
 template<typename Item_Type>
-Singly_Linked_List<Item_Type>::Singly_Linked_List() : head(nullptr), tail(nullptr), num_items = 0 {}
+Singly_Linked_List<Item_Type>::Singly_Linked_List() : head(nullptr), tail(nullptr), num_items(0) {}
 
 // this is my class destructor
 template<typename Item_Type>
@@ -29,7 +29,7 @@ void Singly_Linked_List<Item_Type>::push_front(const Item_Type& item) {
         tail = new_node;
     }
 
-    ++num_items
+    ++num_items;
 }
 
 // function for adding to the back of the list
@@ -44,7 +44,7 @@ void Singly_Linked_List<Item_Type>::push_back(const Item_Type& item) {
         tail->next = new_node;
 
     tail = new_node;
-    ++num_items
+    ++num_items;
 }
 
 // function for removing from the front of the list
@@ -62,7 +62,7 @@ void Singly_Linked_List<Item_Type>::pop_front() {
                 tail = nullptr;
         }
         else {
-            throw out_of_range("List is empty!")
+            throw out_of_range("List is empty!");
         }
 
     } catch (out_of_range err) {
@@ -92,9 +92,9 @@ void Singly_Linked_List<Item_Type>::pop_back() {
                 tail->next = nullptr;
             }
 
-            --num_items
+            --num_items;
         } else {
-            throw out_of_range("List is empty!")
+            throw out_of_range("List is empty!");
         }
     } catch (out_of_range err) {
         cerr << err.what() << endl;
@@ -108,7 +108,7 @@ const Item_Type& Singly_Linked_List<Item_Type>::front() const{
         if (!empty()) {
             return head->data;
         } else {
-            throw out_of_range("List is empty!")
+            throw out_of_range("List is empty!");
         }
     } catch (out_of_range err) {
         cerr << err.what() << endl;
@@ -122,7 +122,7 @@ const Item_Type& Singly_Linked_List<Item_Type>::back() const {
         if (!empty()) {
             return tail->data;
         } else {
-            throw out_of_range("List is empty!")
+            throw out_of_range("List is empty!");
         }
     } catch (out_of_range err) {
         cerr << err.what() << endl;
@@ -148,7 +148,7 @@ void Singly_Linked_List<Item_Type>::insert(size_t index, const Item_Type& item) 
         push_back(item);
     } else {
         Node* curr = head;
-        for (size_t i = 1; i < index, ++i) {
+        for (size_t i = 1; i < index; ++i) {
             curr = curr->next;
         }
         curr->next = new Node(item, curr->next);
