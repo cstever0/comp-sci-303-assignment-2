@@ -16,7 +16,7 @@ public:
     int pop();
     bool isEmpty();
     int top();
-    double average();
+    int average();
 };
 
 #endif

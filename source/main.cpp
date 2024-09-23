@@ -9,6 +9,8 @@ using namespace std;
 int main() {
     Singly_Linked_List<int> example;
 
+    cout << "QUESTION 1 \n" << endl;
+
     // pushing the values 1,2,3,4 to the list
     example.push_front(2);
     example.push_front(1);
@@ -36,6 +38,8 @@ int main() {
 
 
     KiriStack exampleStack;
+
+    cout << "\nQUESTION 2 \n" << endl;
 
     // demonstrating the functionality of isEmpty
     cout << "Checking if the stack is empty - " << (exampleStack.isEmpty() ? "It's empty" : "Not empty") << endl;
