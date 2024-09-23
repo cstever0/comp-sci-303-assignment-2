@@ -1,6 +1,8 @@
 #include <iostream>
 #include "../headers/my-singly-linked-list.h"
+#include "../headers/my-stack.h"
 #include "./my-singly-linked-list.cpp"
+#include "./my-stack.cpp"
 
 using namespace std;
 
@@ -31,6 +33,29 @@ int main() {
     example.remove(1);
     cout << "Removing 45 from index 1" << endl;
     cout << "The value is no longer 45 and the new size of the list is: " << example.find(45) << endl;
+
+
+    KiriStack exampleStack;
+
+    // demonstrating the functionality of isEmpty
+    cout << "Checking if the stack is empty - " << (exampleStack.isEmpty() ? "It's empty" : "Not empty") << endl;
+
+    // pushing the values 1,2,3,4,5,6 onto the stack
+    exampleStack.push(1);
+    exampleStack.push(2);
+    exampleStack.push(3);
+    exampleStack.push(4);
+    exampleStack.push(5);
+    exampleStack.push(6);
+
+    // demonstrating the functionality of popping from the stack
+    cout << "Popping from the top of the stack the value: " << exampleStack.pop() << endl;
+
+    // demonstrating the functionality of top function
+    cout << "The top of the stack is currently the value: " << exampleStack.top() << endl;
+
+    // demonstrating the functionality of the average function
+    cout << "The average of the entire stack is: " << exampleStack.average() << endl;
 
     return 0;
 }
